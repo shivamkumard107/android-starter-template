@@ -1,14 +1,11 @@
 package com.dev.sk.launchpad.data.remote
 
-import com.dev.sk.launchpad.data.model.ExchangeRateResponse
+import com.dev.sk.launchpad.data.model.SampleResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface NetworkService {
 
-    @GET("api/currencies.json")
-    fun getCurrencies(): Map<String, String>
-
     @GET("api/latest.json")
-    fun getCurrenciesExchangeRate(@Query("base") base: String): ExchangeRateResponse
+    fun getCurrenciesExchangeRate(@Query("base") base: String): SampleResponse
 }

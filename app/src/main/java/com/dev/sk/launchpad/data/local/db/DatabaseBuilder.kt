@@ -5,15 +5,15 @@ import androidx.room.Room
 
 object DatabaseBuilder {
     @Volatile
-    private var INSTANCE: ExchangeDatabase? = null
+    private var INSTANCE: SampleDatabase? = null
 
-    fun getInstance(context: Context): ExchangeDatabase {
+    fun getInstance(context: Context): SampleDatabase {
         return INSTANCE ?: synchronized(this) {
             if (INSTANCE == null) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    ExchangeDatabase::class.java,
-                    "exchange_db"
+                    SampleDatabase::class.java,
+                    "sample_db"
                 ).build()
                 INSTANCE = instance
                 instance

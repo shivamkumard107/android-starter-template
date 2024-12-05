@@ -1,12 +1,11 @@
 package com.dev.sk.launchpad.domain.local
 
-import com.dev.sk.launchpad.data.model.ExchangeRateResponse
 import com.dev.sk.launchpad.domain.model.CurrencyDTO
-import com.dev.sk.launchpad.domain.model.ExchangeRateDTO
+import com.dev.sk.launchpad.domain.model.SampleDTO
 
 interface CurrencyDataSource {
     suspend fun getCurrencies(): Result<List<CurrencyDTO>>
-    suspend fun getExchangeRates(): Result<ExchangeRateDTO>
+    suspend fun getExchangeRates(): Result<SampleDTO>
 }
 
 interface LocalDataSource : CurrencyDataSource {
@@ -27,7 +26,7 @@ class DefaultLocalDataSource : LocalDataSource {
         TODO("Not yet implemented")
     }
 
-    override suspend fun getExchangeRates(): Result<ExchangeRateDTO> {
+    override suspend fun getExchangeRates(): Result<SampleDTO> {
         TODO("Not yet implemented")
     }
 

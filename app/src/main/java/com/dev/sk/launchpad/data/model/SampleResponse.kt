@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
 
 @Keep
 @Serializable
-data class ExchangeRateResponse(
+data class SampleResponse(
     @SerialName("disclaimer")
     val disclaimer: String? = null,
     @SerialName("license")
